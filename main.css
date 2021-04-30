@@ -23,7 +23,7 @@
     margin: .4em 0;
 
     animation-name: storyCard;
-    animation-duration: 2s;
+    animation-duration: 1s;
 }
 
 @keyframes storyCard {
@@ -83,4 +83,70 @@
 
 .tabSelected{
     background-color: rgb(92, 92, 92) !important;
+}
+
+
+/* ######################  Story Page ####################### */
+
+a{
+    color: #000;
+}
+
+.storyTitle{
+    /* text-decoration: underline; */
+    cursor: pointer;
+    height: fit-content;
+}
+
+.storyPageRoot{
+    display: flex;
+    flex-direction: column;
+}
+
+.commentHeader{
+    margin: 2em 0 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.commentCard{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    padding: 0 0 1em 0;
+
+    border-bottom: solid 1px rgb(0,0,0,.2);
+
+    animation-name: commentCard;
+    animation-duration: 1s;
+}
+
+.commentDetails{
+    display: flex;
+    align-items: center;
+    margin: 0 0 1em 0;
+}
+
+.commentBy{
+    font-weight: bold;
+    margin: 0 1em 0 0;
+}
+
+.commentDate{
+    color: rgb(0,0,0,.6);
+    font-size: 12px;
+    text-align: center;
+}
+
+.commentText{
+    margin-left: 1em;
+    text-align: justify;
+    overflow: hidden;
+}
+
+
+@keyframes commentCard{
+    from {opacity: 0;}
+    to {opacity: 1;}
 }

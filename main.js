@@ -26,7 +26,7 @@ const stories = async (tab)=>{
 
 
         $('.cardContainer').append(`
-        <div class="storyCard">
+        <div class="storyCard" onclick="handleStoryCardClick(${story.id})">
             <div class="storyTitle">${story.title}</div>
             <div class="storyDetails">
                 <div class="storyDate">${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}</div>
@@ -34,6 +34,14 @@ const stories = async (tab)=>{
             </div>
         </div>
         `)
+
+        // $('.storyCard').click((event)=>{
+        //     console.log('hin')
+        //     const storyId = $(event.target).attr('storyId');
+        //     console.log(storyId)
+        
+        //     // document.location.href=`story.html?storyId=${storyId}`
+        // })
     }
     // console.log(result)
 }
@@ -50,5 +58,10 @@ $('.tab').click((event)=>{
     $(event.target).addClass('tabSelected');
     stories(currentTab);
 })
+
+const handleStoryCardClick = (storyId)=>{
+    
+    document.location.href=`story.html?storyId=${storyId}`
+}
 
 
